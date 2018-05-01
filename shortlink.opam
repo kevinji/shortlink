@@ -10,3 +10,11 @@ license: "MIT"
 build: [
   ["jbuilder" "build" "-p" name "-j" jobs]
 ]
+depends: [
+  "jbuilder" {build}
+  "async"
+  "cohttp"
+  "cohttp-async"
+  "core"
+  "ppxlib"
+]
