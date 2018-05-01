@@ -15,11 +15,11 @@ type t = Entry.t String.Map.t [@@deriving sexp]
 let sample () =
   String.Map.of_alist_exn
     [ ("/cal", { Entry.
-                 dest_url = Uri.of_string "https://www.berkeley.edu/"
+                 dest_url      = Uri.of_string "https://www.berkeley.edu/"
                ; creation_time = Time_ns.now ()
                })
     ; ("/git", { Entry.
-                 dest_url = Uri.of_string "https://github.com/mc10"
+                 dest_url      = Uri.of_string "https://github.com/mc10"
                ; creation_time = Time_ns.now ()
                })
     ]

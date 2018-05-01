@@ -15,7 +15,9 @@ let command =
         in
         fun () ->
           let open Deferred.Let_syntax in
-          let%bind shortlinks = Reader.load_sexp_exn shortlinks_fname Shortlink.t_of_sexp in
+          let%bind shortlinks =
+            Reader.load_sexp_exn shortlinks_fname Shortlink.t_of_sexp
+          in
           let%bind (_ : (Socket.Address.Inet.t, int) Server.t) =
             Shortlink.server ~port ~shortlinks
           in
