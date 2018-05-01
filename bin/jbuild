@@ -4,4 +4,4 @@
  ((name main)
   (public_name shortlink)
   (libraries (shortlink async core))
-  (preprocess (pps (ppxlib ppxlib.runner)))))
+  (preprocess (pps (ppxlib ppx_jane ppxlib.runner)))))
