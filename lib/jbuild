@@ -1,0 +1,6 @@
+(jbuild_version 1)
+
+(library
+ ((name shortlink)
+  (libraries (async cohttp cohttp-async core))
+  (preprocess (pps (ppxlib ppxlib.runner)))))
