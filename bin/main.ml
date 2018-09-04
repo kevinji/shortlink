@@ -6,8 +6,7 @@ let command =
   Command.async ~summary:"Start the shortlink server."
     Command.Let_syntax.(
       [%map_open
-        let port =
-          flag "port" (required int) ~doc:"PORT port to listen on"
+        let port = flag "port" (required int) ~doc:"PORT port to listen on"
         and shortlinks_fname =
           flag "file" (required string) ~doc:"FILE name of file with shortlinks"
         in
@@ -22,5 +21,4 @@ let command =
           Deferred.never ()
       ])
 
-let () =
-  Command.run command
+let () = Command.run command
