@@ -1,0 +1,5 @@
+(executable
+ (name main)
+ (public_name shortlink)
+ (libraries shortlink core async)
+ (preprocess (pps ppxlib ppx_jane ppxlib.runner)))

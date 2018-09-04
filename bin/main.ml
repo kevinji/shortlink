@@ -1,8 +1,6 @@
 open! Core
-open! Async
-open Cohttp
+open Async
 open Cohttp_async
-open Shortlink
 
 let command =
   Command.async ~summary:"Start the shortlink server."

@@ -8,13 +8,13 @@ bug-reports: "https://github.com/mc10/shortlink/issues"
 dev-repo: "https://github.com/mc10/shortlink.git"
 license: "MIT"
 build: [
-  ["jbuilder" "build" "-p" name "-j" jobs]
+  ["dune" "build" "-p" name "-j" jobs]
 ]
 depends: [
-  "jbuilder" {build}
+  "dune" { build & >= "1.1.1" }
+  "core"
   "async"
   "cohttp"
   "cohttp-async"
-  "core"
   "ppxlib"
 ]

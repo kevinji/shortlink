@@ -1,6 +1,5 @@
 open! Core
-open! Async
-open Cohttp
+open Async
 open Cohttp_async
 
 module Entry : sig

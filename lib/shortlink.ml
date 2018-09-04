@@ -1,5 +1,5 @@
 open! Core
-open! Async
+open Async
 open Cohttp
 open Cohttp_async
 
@@ -25,7 +25,7 @@ let sample () =
     ]
 
 let server ~port ~shortlinks =
-  let handler ~body address request =
+  let handler ~body:_ _address request =
     let in_path = Request.uri request |> Uri.path in
     match Map.find shortlinks in_path with
     | None ->

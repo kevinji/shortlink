@@ -1,0 +1,4 @@
+(library
+ (name shortlink)
+ (libraries core async cohttp cohttp-async)
+ (preprocess (pps ppxlib ppx_jane ppxlib.runner)))
