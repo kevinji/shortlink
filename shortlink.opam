@@ -1,13 +1,14 @@
-opam-version: "1.2"
+opam-version: "2.0"
 name: "shortlink"
 version: "0.0.1"
 maintainer: "Kevin Ji"
 authors: ["Kevin Ji"]
 homepage: "https://github.com/mc10/shortlink"
 bug-reports: "https://github.com/mc10/shortlink/issues"
-dev-repo: "https://github.com/mc10/shortlink.git"
+dev-repo: "git+https://github.com/mc10/shortlink.git"
 license: "MIT"
 build: [
+  ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs]
 ]
 depends: [
