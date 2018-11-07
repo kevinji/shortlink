@@ -2,3 +2,7 @@
  (name shortlink)
  (libraries core async cohttp cohttp-async)
  (preprocess (pps ppxlib ppx_jane ppxlib.runner)))
+
+(alias
+ (name default)
+ (deps (alias_rec all)))

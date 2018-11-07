@@ -3,3 +3,7 @@
  (public_name shortlink)
  (libraries shortlink core async)
  (preprocess (pps ppxlib ppx_jane ppxlib.runner)))
+
+(alias
+ (name default)
+ (deps (alias_rec all)))

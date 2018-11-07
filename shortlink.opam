@@ -7,15 +7,23 @@ homepage: "https://github.com/mc10/shortlink"
 bug-reports: "https://github.com/mc10/shortlink/issues"
 dev-repo: "git+https://github.com/mc10/shortlink.git"
 license: "MIT"
+
 build: [
-  ["dune" "subst"] {pinned}
-  ["dune" "build" "-p" name "-j" jobs]
+  [ "dune" "subst" ] { pinned }
+  [ "dune" "build" "-p" name "-j" jobs ]
 ]
+
+run-test: [
+  [ "dune" "runtest" "-p" name "-j" jobs ]
+]
+
 depends: [
-  "dune" { build & >= "1.1.1" }
+  "ocaml"
+  "dune" { build & >= "1.5.0" }
   "core"
   "async"
   "cohttp"
   "cohttp-async"
   "ppxlib"
+  "uri" { >= "2.0.0" }
 ]
